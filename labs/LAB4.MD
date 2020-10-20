@@ -104,4 +104,68 @@ public class Triangle {
 	System.out.println(p);	
 ```
 
+# EXTRA
+>  Write a program that would print the information (name, year of joining, salary, address) of three employees by creating a class named 'Employee'. The output should be as follows:  
 
+| Name  | Year of joining   | Address | Salary|
+|-|--|--|--|
+|Robert |1994| 64C- WallsStreat | 3200|
+|Sam |2000 | 68D- WallsStreat  | 700|
+|John |1999 | 26B- WallsStreat | 4400|
+
+```
+// Employee.java
+public class Employee {
+    String name;
+    float salary;
+    String address;
+    int year_of_joinning;
+    public Employee(String name,int year_of_joinning, String address,float  salary){
+        this.name=name;
+        this.salary=salary;
+        this.address=address;
+        this.year_of_joinning=year_of_joinning;
+    }
+    void p_Parameters(){
+      System.out.println(name+","+year_of_joinning+","+address+","+salary);
+    }
+}
+
+// main()
+	System.out.println("Name,"+"Year of joinning,"+"Address,"+"Salary:");
+	Employee one=new Employee("Robert",1994,"64C-WallsStreat",3200);
+	Employee two=new Employee("Sam",2000,"68B-WallsStreat",700);
+	Employee three=new Employee("John",1999,"26B-WallsStreat",4200);
+	one.p_Parameters();
+	two.p_Parameters();
+	three.p_Parameters();
+```
+> Write a program to print the area of a rectangle by creating a class named 'Area' taking the values of its length and breadth as parameters of its constructor and having a method named 'returnArea' which returns the area of the rectangle. Length and breadth of rectangle are entered through keyboard.
+```
+// Area.java
+public class Area {
+    private double length, width;
+
+    public Area (double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    public double returnArea () {
+        return this.length * this.width;
+    }
+}
+
+// main()
+Scanner sc = new Scanner(System.in);
+	double length, width;
+
+	System.out.println("Introduceti marimile unui dreptunghi:");
+	System.out.print("Length: ");
+	length = sc.nextDouble();
+	System.out.print("Width: ");
+	width = sc.nextDouble();
+
+	Area area = new Area(length, width);
+	System.out.println("Area dreptunghilui este: " + area.returnArea());
+```
